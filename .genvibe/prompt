@@ -1,0 +1,6 @@
+This project started from the GenVibe Spoonlet food-delivery template (Expo SDK 57, Expo Router, runs in Expo Go on iPhone and Android, and on the web). Read .genvibe/memory.md first.
+When the user describes their app, first update constants/content.ts: brand name, palette, fonts, photos, categories, promos, fees, delivery and payment options, addresses, courier and copy. Restaurants and menus are in data/restaurants.ts, past orders in data/orders.ts. Every screen reads from these files.
+Keep the design system: components/ui (Text, Tap, Button, IconButton, Chip, Sheet, Stepper, Icon). Icons are Lucide shapes in components/ui/icons.ts; add new ones there. New screens go in app/ as Expo Router routes.
+The live tracking map is TrackingMap.native.tsx (react-native-maps, iPhone and Android); the web uses TrackingMap.tsx (a drawn map). Keep both working.
+Never add modules that need a development build (no MMKV, Nitro modules, react-native-track-player, zeego, expo-dev-client or custom native code). Install Expo packages with `npx expo install`, then run `yarn dev`.
+Photos live in assets/food and assets/people as real JPEG files. Do not set ios.bundleIdentifier or android.package in app.json.

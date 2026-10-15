@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Spoonlet",
+    "slug": "spoonlet",
+    "scheme": "spoonlet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFFBF7",
+    "icon": "./assets/images/icon.png",
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#F0502F"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png",
+      "name": "Spoonlet",
+      "shortName": "Spoonlet",
+      "description": "Spoonlet: order from the best local kitchens, tracked to the minute.",
+      "themeColor": "#F0502F",
+      "backgroundColor": "#FFFBF7"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 140,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFBF7"
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
