@@ -1,11 +1,11 @@
 # Spoonlet
 
-A premium food delivery app for iPhone and Android, built with Expo SDK 57 and Expo Router. Pick an address,
+A premium food delivery app for iPhone and Android, built with Expo SDK 58 and Expo Router. Pick an address,
 browse local kitchens by category, open a restaurant, choose a dish's size and add-ons, fill your bag (tip and
 promo code included), check out and watch your order travel to your door with a live map and courier card.
 Orders history, favourites and a profile with rewards are included.
 
-Runs in the Expo Go app (SDK 57) on iPhone and Android, and in the browser.
+Runs in the Expo Go app (SDK 58) on iPhone and Android, and in the browser.
 
 ```bash
 yarn install

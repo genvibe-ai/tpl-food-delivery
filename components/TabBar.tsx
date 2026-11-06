@@ -20,7 +20,7 @@ const ITEMS: Record<string, { icon: IconName; label: string }> = {
 };
 
 /** Floating capsule tab bar with a sliding highlight, plus the bag bar above it. */
-export function TabBar({ state, navigation }: BottomTabBarProps) {
+export function TabBar({ state, emitter, navigateToTab }: BottomTabBarProps) {
   const space = useTabBarSpace();
   const [width, setWidth] = useState(0);
   const routes = state.routes.filter((r) => ITEMS[r.name]);
@@ -57,8 +57,9 @@ export function TabBar({ state, navigation }: BottomTabBarProps) {
               pressedScale={0.9}
               style={styles.item}
               onPress={() => {
-                const event = navigation.emit({ type: "tabPress", target: route.key, canPreventDefault: true });
-                if (!focused && !event.defaultPrevented) navigation.navigate(route.name, route.params);
+                // expo-router 58 hands a custom tab bar `emitter` and `navigateToTab`, not `navigation`.
+                const event = emitter.emit({ type: "tabPress", target: route.key, canPreventDefault: true });
+                if (!focused && !event.defaultPrevented) navigateToTab(route.key);
               }}
             >
               <View>
